@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import Home from "./components/Home";
+import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
 import WhatIsMe from "./components/WhatIsMe";
 import {Calendar} from "./components/calendar";
@@ -14,7 +15,7 @@ import ClientNav from './components/ClientNav';
 function App() {
   return (
     <BrowserRouter>
-
+    {/* <NavBar/> */}
     
     <ClientNav />
     
