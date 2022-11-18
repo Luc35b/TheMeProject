@@ -1,7 +1,9 @@
 import React from 'react'
+import ClientNav from './ClientNav';
 
 const WhatIsMe = () => {
   return (
+    
     <div name="About" className='w-full h-screen bg-gradient-to-b from-sky-500 via-sky-500 to-sky-300 text-white '>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8'>
