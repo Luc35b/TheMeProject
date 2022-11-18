@@ -3,11 +3,13 @@ import {BsCalendar3, BsFillJournalBookmarkFill, BsFillPeopleFill} from 'react-ic
 import {VscGraphLine} from 'react-icons/vsc'
 import {CgProfile} from 'react-icons/cg'
 import {BiLogOut} from 'react-icons/bi'
+import ClientNav from './ClientNav';
 
 
 
 const Home = () => {
   return ( 
+    
         <div 
         name="Home" className="bg-gradient-to-b from-sky-300 to-sky-500 w-full
          text-white md:h-screen">
@@ -52,6 +54,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        
   )
   
 };
