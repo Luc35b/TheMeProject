@@ -3,6 +3,7 @@ import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
 import HeroImage from"../assets/Mental-Health.jpg"
 import {Link} from "react-scroll"
 import {RiMentalHealthFill} from "react-icons/ri"
+import ClientNav from './ClientNav';
 
 const Landing = () => {
   return (
@@ -17,7 +18,7 @@ const Landing = () => {
                 </p>
 
                 <div>
-                    <Link to="home" className="group opacity-30 text-black text-opacity-100 font-bold w-fit px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-br from-gray-300 to-white cursor-pointer">
+                    <Link to="/Home" className="group opacity-30 text-black text-opacity-100 font-bold w-fit px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-br from-gray-300 to-white cursor-pointer">
                     Login
                         <span className='group-hover:rotate-90 duration-300 '>
                         <MdOutlineKeyboardArrowRight  size={20} className="ml-1"/>
@@ -30,6 +31,7 @@ const Landing = () => {
             </div>
         </div>
     </div>
+    
   )
 }
 
