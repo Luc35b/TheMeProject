@@ -1,13 +1,19 @@
-import React from 'react'
+import {React, useState} from 'react'
 import {BsCalendar3, BsFillJournalBookmarkFill, BsFillPeopleFill} from 'react-icons/bs'
 import {VscGraphLine} from 'react-icons/vsc'
 import {CgProfile} from 'react-icons/cg'
 import {BiLogOut} from 'react-icons/bi'
+import {Link} from "react-router-dom"
 import ClientNav from './ClientNav';
 
 
 
 const Home = () => {
+  const [nav, setNav] = useState(false);
+  const clickHandler = () => {
+    setNav(!nav)
+  };
+  
   return ( 
     
         <div 
@@ -25,30 +31,32 @@ const Home = () => {
                 <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8
                     px-12 sm:px-0 text-center icons-center'>
                    
-                      <button href="#Landing.jsx" className="rounded-lg w-fit">
-                        <BsFillJournalBookmarkFill size={200} className="opacity-70 mb-2"/>
-                        New Entry
-                        </button>
-                        <button className="rounded-lg w-fit">
-                        <BsCalendar3 size={200} className="opacity-70 mb-2"/>
+                      <Link to="/calendar" className="rounded-lg w-fit">
+                        <span>
+                          <BsFillJournalBookmarkFill size={200} className="text-sky-200 cursor-pointer mb-2"/>
+                         </span> 
+                         New Entry
+                      </Link>
+                        <Link to="/calendar" className="rounded-lg w-fit">
+                        <BsCalendar3 size={200} className="text-sky-200  mb-2"/>
                         Calendar
-                        </button>
-                        <button className="rounded-lg w-fit">
-                        <VscGraphLine size={200} className="opacity-70 mb-2 "/>
+                        </Link>
+                        <Link to="/" className="rounded-lg w-fit">
+                        <VscGraphLine size={200} className="text-sky-200 mb-2"/>
                         Statistics
-                        </button>
-                        <button className="rounded-lg w-fit">
-                        <BsFillPeopleFill size={200} className="opacity-70 mb-2"/>
+                        </Link>
+                        <Link to="/" className="rounded-lg w-fit">
+                        <BsFillPeopleFill size={200} className="text-sky-200 mb-2"/>
                         Community
-                        </button>
-                        <button className="rounded-lg w-fit">
-                        <CgProfile size={200} className="opacity-70 mb-2"/>
+                        </Link>
+                        <Link to="/" className="rounded-lg w-fit">
+                        <CgProfile size={200} className="text-sky-200  mb-2"/>
                         Profile Settings
-                        </button>
-                        <button className="rounded-lg w-fit">
-                        <BiLogOut size={225} className="opacity-70 mb-2 text-white"/>
+                        </Link>
+                        <Link to="/" className="rounded-lg w-fit">
+                        <BiLogOut size={200} className="text-sky-200 mb-2"/>
                         Logout
-                        </button>
+                        </Link>
                         
                         
                 </div>
