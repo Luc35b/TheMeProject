@@ -18,8 +18,8 @@ const Landing = () => {
                 </p>
 
                 <div>
-                    <Link to="Home" className="group text-sky-500 font-bold w-fit px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-br from-sky-200 to-gray-200 cursor-pointer">
-                    Login
+                    <Link to="WhatisMe" className="group text-sky-500 font-bold w-fit px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-br from-sky-200 to-gray-200 cursor-pointer">
+                    Learn more about ME
                         <span className='group-hover:rotate-90 duration-300 '>
                         <MdOutlineKeyboardArrowRight  size={20} className="ml-1"/>
                         </span>

@@ -37,8 +37,8 @@ function ClientNav() {
         {
 
             id: 6,
-            link: 'Log Out',
-            name: "Log Out"
+            link: '/Signup',
+            name: "Join Us"
         },
 
     ];

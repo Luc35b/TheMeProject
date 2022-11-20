@@ -1,32 +1,38 @@
-import './App.css';
-import React from 'react'
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import React from 'react';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
+import Account from './components/Account';
+import Landing from './components/Landing';
+import { Route, Routes } from 'react-router-dom';
+import { AuthContextProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
+import ClientNav from './components/ClientNav';
 import Home from "./components/Home";
-import NavBar from "./components/NavBar";
-import Landing from "./components/Landing";
 import WhatIsMe from "./components/WhatIsMe";
 import {Calendar} from "./components/calendar";
-import ClientNav from './components/ClientNav';
-
 function App() {
   return (
-    <BrowserRouter>
-    {/* <NavBar/> */}
-    
-    <ClientNav />
-    
-    <Routes>
-      <Route exact path="/" element={<Landing />}/>
-      <Route path="/calendar" element={<Calendar />}/>
-      <Route path="/Home" element={<Home />}/>
-      <Route path="/WhatIsMe" element={<WhatIsMe />}/>
-    </Routes>
-    
-    </BrowserRouter>
+    <div>
+         <ClientNav />
+      <AuthContextProvider>
+      <Routes>
+        <Route exact path="/" element={<Landing />}/>
+        <Route path="/calendar" element={<Calendar />}/>
+        <Route path="/Home" element={<Home />}/>
+        <Route path="/WhatIsMe" element={<WhatIsMe />}/>
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route
+            path='/account'
+            element={
+              <ProtectedRoute>
+                <Account />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthContextProvider>
+    </div>
   );
 }
 

@@ -53,9 +53,9 @@ const Home = () => {
                         <CgProfile size={200} className="text-sky-200  mb-2"/>
                         Profile Settings
                         </Link>
-                        <Link to="/" className="rounded-lg w-fit">
+                        <Link to="/signin" className="rounded-lg w-fit">
                         <BiLogOut size={200} className="text-sky-200 mb-2"/>
-                        Logout
+                        Login
                         </Link>
                         
                         
