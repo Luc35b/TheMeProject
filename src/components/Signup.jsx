@@ -25,7 +25,7 @@ const Signup = () =>{
   };
   return (
     <div className="bg-gradient-to-b from-sky-300 to-sky-500 w-full
-    text-white md:h-screen">
+    text-white h-screen">
     <div className='max-w-[700px] mx-auto p-4'>
       <div>
         <h1 className='text-2xl font-bold py-2'>Join Us</h1>
