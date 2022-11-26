@@ -27,7 +27,7 @@ export const Calendar = () => {
     return (
   
         <div className="bg-gradient-to-b from-sky-500 to-sky-300 w-full
-        text-white h-screen">
+        text-white h-max">
           <Container>
           <Row className="px-4">
             <Col sm={12}><h4>Day<br/>Date</h4></Col>
@@ -35,7 +35,7 @@ export const Calendar = () => {
           <Row className="px-4 my-5">
             <Col md={{ span: 3, offset: 2 }}><br/><br/>
             <Card className="text-center">
-              <Card.Header><h5 className="mb-5 text-4xl">How are you feeling today?</h5></Card.Header>
+              <Card.Header><h5 className=" mt-10 mb-10 text-4xl">How are you feeling today?</h5></Card.Header>
               <Card.Body>
                 <Stack direction="horizontal" gap={3}>
                   <Button className="flex-row ml-2 mr-2">
@@ -62,9 +62,9 @@ export const Calendar = () => {
             </Col>
             <Col md={{ span: 3, offset: 2 }}><br/><br/>
             <Card className="text-center">
-      <Card.Header><h5 className="mb-5 text-4xl">How did you sleep last night?</h5></Card.Header>
+      <Card.Header><h5 className="mb-5 mt-5 text-4xl">How did you sleep last night?</h5></Card.Header>
       <Card.Body>
-          <Stack direction="horizontal" gap={2}>
+          <Stack direction="horizontal" gap={2} className="mt-10">
           <Button className="flex-row ml-2 mr-10">
                       <FaThumbsDown size={70} className="text-sky-200">
                       </FaThumbsDown>
@@ -81,8 +81,8 @@ export const Calendar = () => {
           <Row className="px-4 my-5">
             <Col md={{ span: 6, offset: 3 }}><br/>
             <Form className="text-center" onSubmit={handleSave}>
-              <Form.Group className="mb-3" controlId="inputNote">
-              <Form.Label><h5 className="text-center text-2xl mb-3">Why do you think you feel this way?</h5></Form.Label>
+              <Form.Group className="mb-3 max-w-[900px] mx-auto p-4" controlId="inputNote">
+              <Form.Label><h5 className="text-center text-2xl mt-10 mb-5">Why do you think you feel this way?</h5></Form.Label>
               <Form.Control
                 className="w-full justify-items-center text-black"
                 as="textarea"
@@ -92,24 +92,25 @@ export const Calendar = () => {
                 placeholder='  Type here'
               />
               </Form.Group>
-              <Button className="mx-auto text-center bg-sky-500 w-20 h-10 text-lg rounded-md"  type="submit">
+              <Button className=" shadow-md shadow-sky-600 mx-auto text-center bg-sky-500 w-20 h-10 text-lg rounded-md"  type="submit">
                 Save
               </Button>
             </Form>
             </Col>
           </Row>
-          <Row className="px-4 my-5">
+          <Row className="px-4">
             <Col md={{ span: 6, offset: 3 }}><br/>
               <Form>
-                <Form.Label><h5 className='text-center text-2xl mb-5'>Add a picture</h5></Form.Label>
+                <Form.Label><h5 className='text-center text-3xl mb-1 mt-5'>Add a picture</h5></Form.Label>
               </Form>
-      <Card className="text-center">
+      <Card className="text-center max-w-[700px] mx-auto p-4">
       <Card.Header>
         <Stack direction="horizontal" gap={2}>
-               <Button className="mx-auto bg-sky-500 mb-5 rounded-md w-32 h-10">Upload file</Button>
+               <Button className="mx-auto shadow-md shadow-sky-600 bg-sky-500 mb-5 rounded-md w-32 h-10">Upload file</Button>
               </Stack>
       </Card.Header>
-      <Card.Img variant="bottom" src="https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-02-scaled.jpg" />
+      <Card.Img src="https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-02-scaled.jpg" 
+                className="pb-56"/>
     </Card>
             </Col>
           </Row>
