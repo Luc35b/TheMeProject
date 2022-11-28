@@ -26,13 +26,13 @@ function ClientNav() {
         },
         {
             id: 4,
-            link: '/WhatIsMe',
-            name: "About"
+            link: '/Stats',
+            name: "Stats"
         },
         {
             id: 5,
-            link: 'Settings',
-            name: "Settings"
+            link: '/WhatIsMe',
+            name: "About"
         },
         {
 
@@ -59,7 +59,7 @@ function ClientNav() {
             ))}
         </ul>
         <div onClick={()=> clickHandler()} className="cursor-pointer pr-4 z-10 text-sky-400 md:hidden">
-            {togglerNav ? <FaTimes size={30} /> : <FaBars size={30} />}
+            {togglerNav ? <FaTimes className="text-white" size={30} /> : <FaBars className="text-white" size={30} />}
         </div>
         {togglerNav &&(
 

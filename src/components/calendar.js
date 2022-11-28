@@ -26,38 +26,25 @@ import TheCalendar from "./TheCalendar";
 export const Calendar = () => {
   const [date, setDate] = useState("");
   const [emoji, setEmoji] = useState([]);
+  const [sleep, setSleep] = useState([]);
   const messageRef = useRef();
-  const emojiRef = useRef();
 
   const handleChange = (val) => setEmoji(val);
+  const handleChange2 = (val2) => setSleep(val2);
 
   const handleSave = async (e) => {
     e.preventDefault();
     console.log(messageRef.current.value);
 
-    let data = {
+    let entry = {
+      date: date,
       message: messageRef.current.value,
       emoji: emoji,
+      sleep: sleep,
     };
 
     try {
-      addDoc(collection(firestore, "Entry"), data);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  const handleSave2 = async (e) => {
-    e.preventDefault();
-
-    console.log(emojiRef.current.value);
-
-    let data = {
-      emoji: emojiRef.current.value,
-    };
-
-    try {
-      addDoc(collection(firestore, "Emoji"), data);
+      addDoc(collection(firestore, "Entry"), entry);
     } catch (e) {
       console.log(e);
     }
@@ -137,17 +124,24 @@ export const Calendar = () => {
                 <h5 className="mb-5 text-4xl">How did you sleep last night?</h5>
               </Card.Header>
               <Card.Body>
-                <Stack direction="horizontal" gap={2}>
-                  <Button className="flex-row ml-2 mr-10">
-                    <FaThumbsDown
+              <ToggleButtonGroup
+                  className=""
+                  type="radio"
+                  name="options"
+                  value={sleep}
+                  onChange={handleChange2}
+                >
+                  <ToggleButton className="" id="tbg-radio-1" value="Up">
+                    <FaThumbsUp size={70} className="text-sky-200"></FaThumbsUp>
+                  </ToggleButton>
+                  <ToggleButton className="" id="tbg-radio-1" value="Down">
+                  <FaThumbsDown
                       size={70}
                       className="text-sky-200"
                     ></FaThumbsDown>
-                  </Button>
-                  <Button className="flex-row ml-10 mr-2">
-                    <FaThumbsUp size={70} className="text-sky-200"></FaThumbsUp>
-                  </Button>
-                </Stack>
+                  </ToggleButton>
+              </ToggleButtonGroup>
+
               </Card.Body>
             </Card>
           </Col>
