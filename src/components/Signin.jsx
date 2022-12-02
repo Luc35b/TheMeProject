@@ -5,7 +5,8 @@ import { UserAuth } from '../context/AuthContext';
 const Signin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    //const [error, setError] = useState('');
+    const [setError] = useState('');
     const navigate = useNavigate();
     const { signIn } = UserAuth();
     const [errorMessage, setErrorMessage] = React.useState("");

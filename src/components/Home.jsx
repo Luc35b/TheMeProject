@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React from "react";
 import {
   BsCalendar3,
   BsFillJournalBookmarkFill,
@@ -8,13 +8,9 @@ import { VscGraphLine } from "react-icons/vsc";
 import { CgProfile } from "react-icons/cg";
 import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import ClientNav from "./ClientNav";
 
 const Home = () => {
-  const [nav, setNav] = useState(false);
-  const clickHandler = () => {
-    setNav(!nav);
-  };
+ 
 
   return (
     <div
@@ -45,21 +41,9 @@ const Home = () => {
             </span>
             New Entry
           </Link>
-          <Link to="/calendar" className="rounded-lg w-fit">
-            <BsCalendar3 size={200} className="text-sky-200  mb-2" />
-            Calendar
-          </Link>
           <Link to="/" className="rounded-lg w-fit">
             <VscGraphLine size={200} className="text-sky-200 mb-2" />
-            Statistics
-          </Link>
-          <Link to="/" className="rounded-lg w-fit">
-            <BsFillPeopleFill size={200} className="text-sky-200 mb-2" />
-            Community
-          </Link>
-          <Link to="/" className="rounded-lg w-fit">
-            <CgProfile size={200} className="text-sky-200  mb-2" />
-            Profile Settings
+            Stats
           </Link>
           <Link to="/signin" className="rounded-lg w-fit">
             <BiLogOut size={200} className="text-sky-200 mb-2" />
@@ -72,3 +56,14 @@ const Home = () => {
 };
 
 export default Home;
+
+/*
+          <Link to="/" className="rounded-lg w-fit">
+            <CgProfile size={200} className="text-sky-200  mb-2" />
+            Profile Settings
+          </Link>
+          <Link to="/" className="rounded-lg w-fit">
+            <BsFillPeopleFill size={200} className="text-sky-200 mb-2" />
+            Community
+          </Link>
+ */

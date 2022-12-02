@@ -3,10 +3,8 @@ import {
   Container,
   Row,
   Col,
-  Image,
   Form,
   Button,
-  Stack,
   Card,
   ToggleButton,
   ToggleButtonGroup,
@@ -24,9 +22,11 @@ import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 import TheCalendar from "./TheCalendar";
 
 export const Calendar = () => {
-  const [date, setDate] = useState("");
+  //Variable used to save values of button selections to the database
+  const [date, setDate] = useState(""); 
   const [emoji, setEmoji] = useState([]);
   const [sleep, setSleep] = useState([]);
+  //Variable used to save text entries to the database
   const messageRef = useRef();
 
   const handleChange = (val) => setEmoji(val);
@@ -36,6 +36,7 @@ export const Calendar = () => {
     e.preventDefault();
     console.log(messageRef.current.value);
 
+    //data to send to database
     let entry = {
       date: date,
       message: messageRef.current.value,
@@ -51,26 +52,26 @@ export const Calendar = () => {
   };
 
   return (
+    //Buttons and text area
     <div
       className="bg-gradient-to-b from-sky-500 to-sky-300 w-full
-        text-white h-screen"
+        text-white h-full"
     >
       <Container>
-        <Row className="px-4">
-          <Col sm={12}>
-            <h4>
-              Day
-              <br />
-              Date
-            </h4>
+        <Row className="px-4 text-center">
+          <Col md={{ span: 3, offset: 2 }}>
+            <br />
+            <br />
+            <br />
+            <br />
+            <h5 className="mb-5 text-4xl">Select a Date</h5>
+            <TheCalendar value={date} setValue={setDate} />
           </Col>
         </Row>
         <Row className="px-4 my-5">
           <Col md={{ span: 3, offset: 2 }}>
             <br />
-            <br />
             <Card className="text-center">
-              <TheCalendar value={date} setValue={setDate} />
               <Card.Header>
                 <h5 className="mb-5 text-4xl">How are you feeling?</h5>
               </Card.Header>
@@ -146,6 +147,7 @@ export const Calendar = () => {
             </Card>
           </Col>
         </Row>
+      
         <Row className="px-4 my-5">
           <Col md={{ span: 6, offset: 3 }}>
             <br />
@@ -157,9 +159,9 @@ export const Calendar = () => {
                   </h5>
                 </Form.Label>
                 <Form.Control
-                  className="w-full justify-items-center text-black"
+                  className=" w-full justify-items-center text-black"
                   as="textarea"
-                  rows={6}
+                  rows={3}
                   ref={messageRef}
                   id="inputNote"
                   placeholder="  Type here"
@@ -171,6 +173,10 @@ export const Calendar = () => {
               >
                 Save
               </Button>
+              <br />
+              <br />
+              <br />
+              
             </Form>
           </Col>
         </Row>

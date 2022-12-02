@@ -1,9 +1,7 @@
 import React from 'react'
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
-import HeroImage from"../assets/Mental-Health.jpg"
 import {Link} from "react-router-dom"
 import {RiMentalHealthFill} from "react-icons/ri"
-import ClientNav from './ClientNav';
 
 const Landing = () => {
   return (

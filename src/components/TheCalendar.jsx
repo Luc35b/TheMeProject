@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Calendar from "react-calendar";
 
 const TheCalendar = ({ value, setValue }) => {
@@ -10,7 +10,7 @@ const TheCalendar = ({ value, setValue }) => {
     <div>
       <Calendar onChange={onChange} value={value} />
       {console.log(value)}
-      {value.toString()}
+      {value.toString().substring(0,16)}
     </div>
   );
 };
