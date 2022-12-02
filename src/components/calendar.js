@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { UserAuth } from "../context/AuthContext";
 import {
   Container,
   Row,
@@ -20,13 +21,13 @@ import {
 } from "react-icons/bs";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 import TheCalendar from "./TheCalendar";
-import userEvent from "@testing-library/user-event";
 
 export const Calendar = () => {
   //Variable used to save values of button selections to the database
   const [date, setDate] = useState(""); 
   const [emoji, setEmoji] = useState([]);
   const [sleep, setSleep] = useState([]);
+  const {user} = UserAuth();
   //Variable used to save text entries to the database
   const messageRef = useRef();
 
@@ -43,7 +44,7 @@ export const Calendar = () => {
       message: messageRef.current.value,
       emoji: emoji,
       sleep: sleep,
-      email:userEvent.email,
+      email:user.email,
     };
 
     try {
