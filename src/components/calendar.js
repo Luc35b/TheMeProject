@@ -20,6 +20,7 @@ import {
 } from "react-icons/bs";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 import TheCalendar from "./TheCalendar";
+import userEvent from "@testing-library/user-event";
 
 export const Calendar = () => {
   //Variable used to save values of button selections to the database
@@ -42,6 +43,7 @@ export const Calendar = () => {
       message: messageRef.current.value,
       emoji: emoji,
       sleep: sleep,
+      email:userEvent.email,
     };
 
     try {

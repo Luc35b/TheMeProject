@@ -20,13 +20,13 @@ function ClientNav() {
   const links = [
     {
       id: 1,
-      link: "/",
-      name: "Welcome",
+      link: "/Home",
+      name: "Home",
     },
     {
       id: 2,
-      link: "/Home",
-      name: "Home",
+      link: "/Account",
+      name: "Profile"
     },
     {
       id: 3,
@@ -37,11 +37,6 @@ function ClientNav() {
       id: 4,
       link: "/Stats",
       name: "Stats",
-    },
-    {
-      id: 5,
-      link: "/WhatIsMe",
-      name: "About",
     },
     {
       id: 6,

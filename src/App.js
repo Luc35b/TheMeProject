@@ -5,7 +5,6 @@ import Account from "./components/Account";
 import Landing from "./components/Landing";
 import { Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import ClientNav from "./components/ClientNav";
 import Home from "./components/Home";
 import WhatIsMe from "./components/WhatIsMe";
@@ -22,6 +21,7 @@ function App() {
           <Route path="/WhatIsMe" element={<WhatIsMe />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/Account" element={<Account />} />
         </Routes>
       </AuthContextProvider>
     </div>
