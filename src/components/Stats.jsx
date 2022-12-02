@@ -1,5 +1,4 @@
 import React from 'react';
-import ClientNav from './ClientNav';
 
 const Stats = () => {
   return (
