@@ -62,6 +62,12 @@ function ClientNav() {
       link: "/Signup",
       name: "Join Us",
     },
+    {
+        id: 7,
+        link: "/Signin",
+        name: "Login",
+      },
+
   ];
 
   return (
@@ -102,7 +108,7 @@ function ClientNav() {
       >
         {togglerNav ? (
           <div>
-            <FaTimes className="text-white" size={30} />
+            <FaTimes className="text-sky-400" size={30} />
             <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-screen h-screen fill-sky-500 bg-sky-500 bg-gradient-to-b from-sky-500 to-sky-200 text-white">
               {user
                 ? links.map(({ id, link, name }) => (
@@ -133,7 +139,7 @@ function ClientNav() {
           </div>
         ) : (
           <div>
-            <FaBars className="text-white" size={30} />
+            <FaBars className="text-sky-400" size={30} />
           </div>
         )}
       </div>

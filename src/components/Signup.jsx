@@ -26,7 +26,7 @@ const Signup = () => {
     }
   };
   return (
-    <div
+    <div name="Signup"
       className="bg-gradient-to-b from-sky-300 to-sky-500 w-full
     text-white h-screen"
     >

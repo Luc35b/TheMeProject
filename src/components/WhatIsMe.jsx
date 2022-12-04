@@ -1,5 +1,6 @@
 import React from 'react'
-
+import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
+import {Link} from "react-router-dom"
 const WhatIsMe = () => {
   return (
     
@@ -17,7 +18,15 @@ const WhatIsMe = () => {
             <p className='text-xl'>
                 Create an account if you want, but your entries might not be stored
             </p>
+                    <Link to="/Signup" className=" mt-20 shadow-md shadow-sky-600 group text-sky-500 font-bold w-fit px-6 py-3 my-3 flex items-center rounded-md bg-gradient-to-br from-sky-200 to-gray-200 cursor-pointer">
+                    Sign Up Now!
+                        <span className='group-hover:rotate-90 duration-300 '>
+                        <MdOutlineKeyboardArrowRight  size={20} className="ml-1"/>
+                        </span>
+                    </Link>
         </div>
+        
+                
     </div>
   )
 }

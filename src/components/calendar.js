@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import {Link} from "react-router-dom"
 import { UserAuth } from "../context/AuthContext";
 import {
   Container,
@@ -78,46 +79,48 @@ export const Calendar = () => {
               <Card.Header>
                 <h5 className="mb-5 text-4xl">How are you feeling?</h5>
               </Card.Header>
-              <Card.Body>
-                <ToggleButtonGroup
-                  className=""
+              <Card.Body className="flex justify-between items-center max-w-[500px] mx-auto mb-5">
+              <BsEmojiDizzy
+                      size={70}
+                      className="text-sky-200"
+                    ></BsEmojiDizzy> 
+              <BsEmojiFrown
+                size={70}
+                className="text-sky-200"
+              ></BsEmojiFrown>
+              <BsEmojiExpressionless
+                  size={70}
+                  className="text-sky-200"
+              ></BsEmojiExpressionless>
+              <BsEmojiSmile
+                  size={70}
+                  className="text-sky-200"
+              ></BsEmojiSmile>
+               <BsEmojiLaughing
+                      size={70}
+                      className="text-sky-200"
+                    ></BsEmojiLaughing>
+            
+              </Card.Body>    
+              <ToggleButtonGroup
+                  className="flex justify-between pl-10 mx-auto max-w-[530px]"
                   type="radio"
                   name="options"
                   value={emoji}
                   onChange={handleChange}
+
                 >
                   <ToggleButton className="" id="tbg-radio-1" value="Terrible">
-                    <BsEmojiDizzy
-                      size={70}
-                      className="text-sky-200"
-                    ></BsEmojiDizzy>
                   </ToggleButton>
                   <ToggleButton className="" id="tbg-radio-3" value="Bad">
-                    <BsEmojiFrown
-                      size={70}
-                      className="text-sky-200"
-                    ></BsEmojiFrown>
                   </ToggleButton>
-                  <ToggleButton className="" id="tbg-radio-2" value="Average">
-                    <BsEmojiExpressionless
-                      size={70}
-                      className="text-sky-200"
-                    ></BsEmojiExpressionless>
+                  <ToggleButton className="" id="tbg-radio-2" value="Average">           
                   </ToggleButton>
                   <ToggleButton className="" id="tbg-radio-3" value="Good">
-                    <BsEmojiSmile
-                      size={70}
-                      className="text-sky-200"
-                    ></BsEmojiSmile>
                   </ToggleButton>
                   <ToggleButton className="" id="tbg-radio-3" value="Amazing">
-                    <BsEmojiLaughing
-                      size={70}
-                      className="text-sky-200"
-                    ></BsEmojiLaughing>
                   </ToggleButton>
                 </ToggleButtonGroup>
-              </Card.Body>
             </Card>
           </Col>
           <Col md={{ span: 3, offset: 2 }}>
@@ -127,42 +130,44 @@ export const Calendar = () => {
               <Card.Header>
                 <h5 className="mb-5 text-4xl">How did you sleep last night?</h5>
               </Card.Header>
-              <Card.Body>
-              <ToggleButtonGroup
-                  className=""
+              <Card.Body  className="flex justify-between items-center max-w-[220px] mx-auto mb-5">
+              <FaThumbsUp size={70} className="text-sky-200"></FaThumbsUp>
+                 <FaThumbsDown
+                      size={70}
+                      className="text-sky-200"
+                    ></FaThumbsDown>
+              </Card.Body>
+                <ToggleButtonGroup
+                  className="flex justify-between pl-14 mx-auto max-w-[300px]"
                   type="radio"
                   name="options"
                   value={sleep}
                   onChange={handleChange2}
                 >
                   <ToggleButton className="" id="tbg-radio-1" value="Up">
-                    <FaThumbsUp size={70} className="text-sky-200"></FaThumbsUp>
                   </ToggleButton>
                   <ToggleButton className="" id="tbg-radio-1" value="Down">
-                  <FaThumbsDown
-                      size={70}
-                      className="text-sky-200"
-                    ></FaThumbsDown>
+               
                   </ToggleButton>
               </ToggleButtonGroup>
 
-              </Card.Body>
+              
             </Card>
           </Col>
         </Row>
       
-        <Row className="px-4 my-5">
+        <Row className="px-4 ">
           <Col md={{ span: 6, offset: 3 }}>
             <br />
             <Form className="text-center" onSubmit={handleSave}>
-              <Form.Group className="mb-3" controlId="inputNote">
+              <Form.Group className="mb-3 " controlId="inputNote">
                 <Form.Label>
                   <h5 className="text-center text-2xl mb-3">
                     Why do you think you feel this way?
                   </h5>
                 </Form.Label>
                 <Form.Control
-                  className=" w-full justify-items-center text-black"
+                  className="justify-items-center text-black w-[450px] lg:w-[600px]"
                   as="textarea"
                   rows={3}
                   ref={messageRef}
@@ -170,12 +175,13 @@ export const Calendar = () => {
                   placeholder="  Type here"
                 />
               </Form.Group>
-              <Button
-                className="mx-auto text-center bg-sky-500 w-20 h-10 text-lg rounded-md"
+              <Link
+                className="mx-auto text-center shadow-lg shadow-sky-700 bg-sky-500 w-20 h-10 text-lg rounded-md"
                 type="submit"
+                to="/Home"
               >
                 Save
-              </Button>
+              </Link>
               <br />
               <br />
               <br />

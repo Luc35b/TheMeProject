@@ -20,7 +20,7 @@ const Home = () => {
     >
       <div
         className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
-             w-full h-full"
+             w-full h-screen"
       >
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-sky-300">
@@ -45,9 +45,9 @@ const Home = () => {
             <VscGraphLine size={200} className="text-sky-200 mb-2" />
             Stats
           </Link>
-          <Link to="/signin" className="rounded-lg w-fit">
+          <Link to="/" className="rounded-lg w-fit">
             <BiLogOut size={200} className="text-sky-200 mb-2" />
-            Login
+            LogOut
           </Link>
         </div>
       </div>
