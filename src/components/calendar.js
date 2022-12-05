@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {Link} from "react-router-dom"
 import { UserAuth } from "../context/AuthContext";
 import {
@@ -6,7 +6,6 @@ import {
   Row,
   Col,
   Form,
-  Button,
   Card,
   ToggleButton,
   ToggleButtonGroup,
@@ -30,19 +29,18 @@ export const Calendar = () => {
   const [sleep, setSleep] = useState([]);
   const {user} = UserAuth();
   //Variable used to save text entries to the database
-  const messageRef = useRef();
+  const [message, setMessage] = useState(""); 
 
   const handleChange = (val) => setEmoji(val);
   const handleChange2 = (val2) => setSleep(val2);
 
   const handleSave = async (e) => {
     e.preventDefault();
-    console.log(messageRef.current.value);
 
     //data to send to database
     let entry = {
       date: date,
-      message: messageRef.current.value,
+      message: message,
       emoji: emoji,
       sleep: sleep,
       email:user.email,
@@ -170,9 +168,10 @@ export const Calendar = () => {
                   className="justify-items-center text-black w-[450px] lg:w-[600px]"
                   as="textarea"
                   rows={3}
-                  ref={messageRef}
+                  value={message}
                   id="inputNote"
                   placeholder="  Type here"
+                  onChange={e => setMessage(e.target.value)}
                 />
               </Form.Group>
               <Link
