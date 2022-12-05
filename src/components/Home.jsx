@@ -1,11 +1,8 @@
 import React from "react";
 import {
-  BsCalendar3,
   BsFillJournalBookmarkFill,
-  BsFillPeopleFill,
 } from "react-icons/bs";
 import { VscGraphLine } from "react-icons/vsc";
-import { CgProfile } from "react-icons/cg";
 import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
 

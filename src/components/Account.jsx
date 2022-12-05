@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 
 const Account = () => {
-  const { user, logout } = UserAuth();
-  const navigate = useNavigate();
+  const { user } = UserAuth();
+
   return (
     
     <div name="Stats" className='nav-link w-full h-screen bg-gradient-to-b from-sky-500 via-sky-500 to-sky-300 text-white '>
