@@ -9,7 +9,7 @@ import { Link ,useNavigate} from "react-router-dom";
 
 import { UserAuth } from "../context/AuthContext";
 const Home = () => {
-  const { user, logout } = UserAuth();
+  const {logout } = UserAuth();
   const navigate = useNavigate();
   const logOutHandler = () => {
     logout();
