@@ -3,29 +3,33 @@
 CEN3031
 UF PROPJECT 
 
-Clone Repository:
-Make sure git and node,js are installed and configured https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+Check out live website at :
+https://karltheram.github.io/TheMeProject/
 
-Clone the project.
-git clone https://github.com/Karltheram/TheMeProject.git
+To Contribute:
 
-Change directories
-cd ~/TheMeProject/
+Fork the project using the fork button at the top right of the repository page
 
 Make sure master branch is up to date
 git pull https://github.com/Karltheram/TheMeProject.git master
 
-Fork the project using the fork button at the top right of the repository page
+Clone Repository:
+Make sure git and node,js are installed and configured https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+
+Clone the project:
+git clone https://github.com/Karltheram/TheMeProject.git
+
+Change directories
+cd ~/TheMeProject/
 
 Push to the forked Repo(Optional):
 
 Create and checkout a new branch:
 git checkout -b <newbranch>
 
-Create a project directory:
-mkdir project
+Make a contribution!
 
-Add and push changes to GitHub 
+Add and push changes to GitHub and wait for approval
 git add .
 git commit -m “<message>”
 git push origin new-feature
