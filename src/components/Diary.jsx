@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  BsEmojiDizzy,
-  BsEmojiFrown,
-  BsEmojiSmile,
-  BsEmojiLaughing,
-  BsEmojiExpressionless,
-} from "react-icons/bs";
+import { BsEmojiLaughing } from "react-icons/bs";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
-import {Card,Button} from 'react-bootstrap'
 
 const Diary = () => {
   return (

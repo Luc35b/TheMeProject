@@ -2,7 +2,6 @@ import React from "react";
 import {
   BsFillJournalBookmarkFill,
 } from "react-icons/bs";
-import { VscGraphLine } from "react-icons/vsc";
 import {CgProfile} from "react-icons/cg";
 import { BiLogOut } from "react-icons/bi";
 import {GiOpenBook} from "react-icons/gi"
