@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import pic from '../assets/placeholder2.png';
 const Account = () => {

@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { UserAuth } from "../context/AuthContext";
-import { click } from "@testing-library/user-event/dist/click";
 
 function ClientNav() {
   const [togglerNav, setTogglerNav] = useState(false);
