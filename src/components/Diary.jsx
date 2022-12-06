@@ -1,4 +1,12 @@
 import React from 'react';
+import {
+  BsEmojiDizzy,
+  BsEmojiFrown,
+  BsEmojiSmile,
+  BsEmojiLaughing,
+  BsEmojiExpressionless,
+} from "react-icons/bs";
+import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 import {Card,Button} from 'react-bootstrap'
 
 const Diary = () => {
@@ -17,10 +25,16 @@ const Diary = () => {
           
         </div>
         <div className="postTextContainer text-center"> Dec 6,2022  </div>
-        
-        <div className="postTextContainer "> You felt: Happy  </div>
+        <div className="postTextContainer "> You felt:  </div>
         <br/>
-        <div className="postTextContainer "> You Slept: Great  </div>
+        <div className="postTextContainer "> <BsEmojiLaughing
+                      size={70}
+                      className="text-sky-200"
+                    ></BsEmojiLaughing> </div>
+        <br/>
+        <div className="postTextContainer "> You slept last night feeling:  </div>
+        <br/>
+        <div className="postTextContainer "> <FaThumbsUp size={70} className="text-sky-200"></FaThumbsUp> </div>
         <br/>
         <div className="postTextContainer "> Notes:  </div>
         <div className="postTextContainer"> OMG I am going to spend $100 for a gacha character in Genshin Impact tonight!  </div>
