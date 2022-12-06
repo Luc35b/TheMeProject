@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { UserAuth } from "../context/AuthContext";
+import { click } from "@testing-library/user-event/dist/click";
 
 function ClientNav() {
   const [togglerNav, setTogglerNav] = useState(false);
@@ -14,6 +15,7 @@ function ClientNav() {
 
   const logOutHandler = () => {
     logout();
+    clickHandler();
     navigate("/");
   };
   const links = [
@@ -129,7 +131,7 @@ function ClientNav() {
                       {name !== "logout" ? (
                         <Link to={link} onClick={()=> clickHandler()}>{name}</Link>
                       ) : (
-                        <li onClick={logOutHandler}>logout</li>
+                        <li onClick={logOutHandler }>logout</li>
                       )}
                     </li>
             ))}

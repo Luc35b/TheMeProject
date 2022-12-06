@@ -15,12 +15,12 @@ const Signin = () => {
     setError("");
     try {
       await signIn(email, password);
-      navigate("/"); // this goes to the homepage
+      navigate("/Home"); // this goes to the homepage
     } catch (e) {
       setError(e.message);
       setErrorMessage("Invalid login input or not registered yet!");
       console.log(e.message);
-      alert("ERROR");
+      
     }
   };
   return (
@@ -36,7 +36,7 @@ const Signin = () => {
             <Link to="/signup" className="underline">
               Register.
             </Link>
-            {errorMessage && <div className="error"> {errorMessage} </div>}{" "}
+            {errorMessage && <div className="error text-red-500"> {errorMessage} </div>}{" "}
             {/* This needs to be styled so that its red */}
           </p>
         </div>

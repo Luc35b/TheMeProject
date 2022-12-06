@@ -3,6 +3,7 @@ import {
   BsFillJournalBookmarkFill,
 } from "react-icons/bs";
 import { VscGraphLine } from "react-icons/vsc";
+import {CgProfile} from "react-icons/cg";
 import { BiLogOut } from "react-icons/bi";
 import {GiOpenBook} from "react-icons/gi"
 import { Link ,useNavigate} from "react-router-dom";
@@ -44,6 +45,10 @@ const Home = () => {
               />
             </span>
             New Entry
+          </Link>
+          <Link to="/Account" className="rounded-lg w-fit">
+            <CgProfile size={200} className="text-sky-200 mb-2" />
+            Profile
           </Link>
           <Link to="/Diary" className="rounded-lg w-fit">
             <GiOpenBook size={200} className="text-sky-200 mb-2" />

@@ -20,10 +20,17 @@ function App() {
         <ClientNav />
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route path="/Home" element={<Home />} />
           <Route path="/WhatIsMe" element={<WhatIsMe />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route
+            path='/Home'
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path='/Diary'
             element={

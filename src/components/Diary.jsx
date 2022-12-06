@@ -3,7 +3,7 @@ import {Card,Button} from 'react-bootstrap'
 
 const Diary = () => {
   return (
-    <div name="About" className='nav-link w-full h-screen bg-gradient-to-b from-sky-500 via-sky-600 to-sky-300 text-black '>
+    <div name="About" className='nav-link w-full h-screen bg-gradient-to-b from-sky-300 to-sky-500  text-black '>
     <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
       <div className="homePage">
       

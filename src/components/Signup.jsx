@@ -22,7 +22,7 @@ const Signup = () => {
         "Already used email or password is not 6 or more characters!"
       );
       console.log(e.message);
-      alert("ERROR");
+      
     }
   };
   return (
@@ -38,7 +38,7 @@ const Signup = () => {
             <Link to="/signin" className="underline">
               Sign in.
             </Link>
-            {errorMessage && <div className="error"> {errorMessage} </div>}{" "}
+            {errorMessage && <div className="error text-red-500"> {errorMessage} </div>}{" "}
             {/* This needs to be styled so that its red */}
           </p>
         </div>
