@@ -19,6 +19,7 @@ function App() {
       <AuthContextProvider>
         <ClientNav />
         <Routes>
+        <Route exact path="/TheMeProject" element={<Landing />} />
           <Route exact path="/" element={<Landing />} />
           <Route path="/WhatIsMe" element={<WhatIsMe />} />
           <Route path="/signin" element={<Signin />} />

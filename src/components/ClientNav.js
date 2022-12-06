@@ -15,7 +15,11 @@ function ClientNav() {
 
   const logOutHandler = () => {
     logout();
-    clickHandler();
+    navigate("/");
+  };
+  const logOutHandler2 = () => {
+    logout();
+    setTogglerNav(!togglerNav);
     navigate("/");
   };
   const links = [
@@ -119,7 +123,7 @@ function ClientNav() {
                       {name !== "Logout" ? (
                         <Link to={link} onClick={()=> clickHandler()}>{name}</Link>
                       ) : (
-                        <p onClick={logOutHandler}>logout</p>
+                        <p onClick={logOutHandler2}>logout</p>
                       )}
                     </li>
                   ))
