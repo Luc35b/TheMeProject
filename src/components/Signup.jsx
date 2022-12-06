@@ -12,12 +12,10 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
     try {
       await createUser(email, password);
       navigate("/");
     } catch (e) {
-      setError(e.message);
       setErrorMessage(
         "Already used email or password is not 6 or more characters!"
       );

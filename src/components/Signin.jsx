@@ -12,15 +12,12 @@ const Signin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
     try {
       await signIn(email, password);
       navigate("/Home"); // this goes to the homepage
     } catch (e) {
-      setError(e.message);
       setErrorMessage("Invalid login input or not registered yet!");
       console.log(e.message);
-      
     }
   };
   return (
