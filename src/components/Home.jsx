@@ -4,10 +4,17 @@ import {
 } from "react-icons/bs";
 import { VscGraphLine } from "react-icons/vsc";
 import { BiLogOut } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import {GiOpenBook} from "react-icons/gi"
+import { Link ,useNavigate} from "react-router-dom";
 
+import { UserAuth } from "../context/AuthContext";
 const Home = () => {
- 
+  const { user, logout } = UserAuth();
+  const navigate = useNavigate();
+  const logOutHandler = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <div
@@ -38,13 +45,13 @@ const Home = () => {
             </span>
             New Entry
           </Link>
-          <Link to="/" className="rounded-lg w-fit">
-            <VscGraphLine size={200} className="text-sky-200 mb-2" />
-            Stats
+          <Link to="/Diary" className="rounded-lg w-fit">
+            <GiOpenBook size={200} className="text-sky-200 mb-2" />
+            Diary
           </Link>
-          <Link to="/" className="rounded-lg w-fit">
+          <Link to="/" onClick={logOutHandler} className="rounded-lg w-fit">
             <BiLogOut size={200} className="text-sky-200 mb-2" />
-            LogOut
+            Logout
           </Link>
         </div>
       </div>

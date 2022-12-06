@@ -34,8 +34,8 @@ function ClientNav() {
     },
     {
       id: 4,
-      link: "/Stats",
-      name: "Stats",
+      link: "/Diary",
+      name: "Diary",
     },
     {
       id: 6,
@@ -101,22 +101,21 @@ function ClientNav() {
               </li>
             ))}
       </ul>
-      <div
-        onClick={() => clickHandler()}
-        className="cursor-pointer pr-4 z-10 text-sky-400 md:hidden"
-      >
-        {togglerNav ? (
-          <div>
-            <FaTimes className="text-sky-400" size={30} />
-            <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-screen h-screen fill-sky-500 bg-sky-500 bg-gradient-to-b from-sky-500 to-sky-200 text-white">
-              {user
+    
+      <div onClick={()=> clickHandler()} className="cursor-pointer pr-4 z-10 text-sky-400 md:hidden">
+            {togglerNav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        </div>
+        {togglerNav &&(
+
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-screen h-screen fill-sky-500 bg-sky-500 bg-gradient-to-b from-sky-500 to-sky-200 text-white">
+        {user
                 ? links.map(({ id, link, name }) => (
                     <li
                       key={id}
                       className="px-4 cursor-pointer capitalize py-6 text-4xl"
                     >
                       {name !== "Logout" ? (
-                        <Link to={link}>{name}</Link>
+                        <Link to={link} onClick={()=> clickHandler()}>{name}</Link>
                       ) : (
                         <p onClick={logOutHandler}>logout</p>
                       )}
@@ -128,22 +127,15 @@ function ClientNav() {
                       className="px-4 cursor-pointer capitalize py-6 text-4xl"
                     >
                       {name !== "logout" ? (
-                        <Link to={link}>{name}</Link>
+                        <Link to={link} onClick={()=> clickHandler()}>{name}</Link>
                       ) : (
                         <li onClick={logOutHandler}>logout</li>
                       )}
                     </li>
-                  ))}
-            </ul>
-          </div>
-        ) : (
-          <div>
-            <FaBars className="text-sky-400" size={30} />
-          </div>
+            ))}
+        </ul>
         )}
-      </div>
     </div>
-  );
-}
-
+    );
+};
 export default ClientNav;

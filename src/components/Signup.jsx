@@ -5,7 +5,7 @@ import { UserAuth } from "../context/AuthContext";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [setError] = useState("");
+  const [error, setError] = useState("");
   const { createUser } = UserAuth();
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = React.useState("");
@@ -26,7 +26,7 @@ const Signup = () => {
     }
   };
   return (
-    <div name="Signup"
+    <div
       className="bg-gradient-to-b from-sky-300 to-sky-500 w-full
     text-white h-screen"
     >

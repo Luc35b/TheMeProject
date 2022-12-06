@@ -56,7 +56,7 @@ export const Calendar = () => {
   return (
     //Buttons and text area
     <div
-      className="bg-gradient-to-b from-sky-500 to-sky-300 w-full
+      className="bg-gradient-to-b from-sky-300 to-sky-500 w-full
         text-white h-full"
     >
       <Container>
